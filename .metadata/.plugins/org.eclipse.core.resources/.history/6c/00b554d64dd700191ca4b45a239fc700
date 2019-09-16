@@ -1,0 +1,6 @@
+Looked up public apis.
+Found one that satisfied the requirement of being able to query in the url.
+Response output came in json format.
+
+In Java.
+Since the format was JSON, create a matching 'Drink' java bean object.
