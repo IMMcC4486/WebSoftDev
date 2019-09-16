@@ -1,4 +1,5 @@
 package P1;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Drink {
@@ -59,6 +60,280 @@ public class Drink {
 	private String strMeasure15;
 	private String strCreativeCommonsConfirmed;
 	private String dateModified;
+	
+	
+	public void populateFields(JSONObject drinks) throws JSONException {
+		try {
+			setIdDrink((String)drinks.get("idDrink"));
+		} catch (ClassCastException e) {
+			setIdDrink(null);
+		}
+		try {
+			setStrDrink((String) drinks.get("strDrink"));
+		} catch (ClassCastException e) {
+			setStrDrink(null);
+		}
+		try {
+			setStrDrinkAlternate((String) drinks.get("strDrinkAlternate"));
+		} catch (ClassCastException e) {
+			setStrDrinkAlternate(null);
+		}
+		try {
+			setStrDrinkES((String) drinks.get("strDrinkES"));
+		} catch (ClassCastException e1) {
+			setStrDrinkES(null);
+		}
+		try {
+			setStrDrinkDE((String) drinks.get("strDrinkDE"));
+		} catch (ClassCastException e) {
+			setStrDrinkDE(null);
+		}
+		try {
+			setStrDrinkFR((String) drinks.get("strDrinkFR"));
+		} catch (ClassCastException e) {
+			setStrDrinkFR(null);
+		}
+		try {
+			setStrDrinkZH_HANS((String) drinks.get("strDrinkZH-HANS"));
+		} catch (ClassCastException e) {
+			setStrDrinkZH_HANS(null);
+		}
+		try {
+			setStrDrinkZH_HANT((String) drinks.get("strDrinkZH-HANT"));
+		} catch (ClassCastException e) {
+			setStrDrinkZH_HANT(null);
+		}
+		try {
+			setStrTags((String) drinks.get("strTags"));
+		} catch (ClassCastException e) {
+			setStrTags(null);
+		}
+		try {
+			setStrVideo((String) drinks.get("strVideo"));
+		} catch (ClassCastException e) {
+			setStrVideo(null);
+		}
+		try {
+			setStrCategory((String) drinks.get("strCategory"));
+		} catch (ClassCastException e) {
+			setStrCategory(null);
+		}
+		try {
+			setStrIBA((String) drinks.get("strIBA"));
+		} catch (ClassCastException e) {
+			setStrIBA(null);
+		}
+		try {
+			setStrAlcoholic((String) drinks.get("strAlcoholic"));
+		} catch (ClassCastException e) {
+			setStrAlcoholic(null);
+		}
+		try {
+			setStrGlass((String) drinks.get("strGlass"));
+		} catch (ClassCastException e) {
+			setStrGlass(null);
+		}
+		try {
+			setStrInstructions((String) drinks.get("strInstructions"));
+		} catch (ClassCastException e) {
+			setStrInstructions(null);
+		}
+		try {
+			setStrInstructionsES((String) drinks.get("strInstructionsES"));
+		} catch (ClassCastException e) {
+			setStrInstructionsES(null);
+		}
+		try {
+			setStrInstructionsDE((String) drinks.get("strInstructionsDE"));
+		} catch (ClassCastException e) {
+			setStrInstructionsDE(null);
+		}
+		try {
+			setStrInstructionsFR((String) drinks.get("strInstructionsFR"));
+		} catch (ClassCastException e) {
+			setStrInstructionsFR(null);
+		}
+		try {
+			setStrInstructionsZH_HANS((String) drinks.get("strInstructionsZH-HANS"));
+		} catch (ClassCastException e) {
+			setStrInstructionsZH_HANS(null);
+		}
+		try {
+			setStrInstructionsZH_HANT((String) drinks.get("strInstructionsZH-HANT"));
+		} catch (ClassCastException e) {
+			setStrInstructionsZH_HANT(null);
+		}
+		try {
+			setStrDrinkThumb((String) drinks.get("strDrinkThumb"));
+		} catch (ClassCastException e) {
+			setStrDrinkThumb(null);
+		}
+		try {
+			setStrIngredient1((String) drinks.get("strIngredient1"));
+		} catch (ClassCastException e) {
+			setStrIngredient1(null);
+		}
+		try {
+			setStrIngredient2((String) drinks.get("strIngredient2"));
+		} catch (ClassCastException e) {
+			setStrIngredient2(null);
+		}
+		try {
+			setStrIngredient3((String) drinks.get("strIngredient3"));
+		} catch (ClassCastException e) {
+			setStrIngredient3(null);
+		}
+		try {
+			setStrIngredient4((String) drinks.get("strIngredient4"));
+		} catch (ClassCastException e) {
+			setStrIngredient4(null);
+		}
+		try {
+			setStrIngredient5((String) drinks.get("strIngredient5"));
+		} catch (ClassCastException e) {
+			setStrIngredient5(null);
+		}
+		try {
+			setStrIngredient6((String) drinks.get("strIngredient6"));
+		} catch (ClassCastException e) {
+			setStrIngredient6(null);
+		}
+		try {
+			setStrIngredient7((String) drinks.get("strIngredient7"));
+		} catch (ClassCastException e) {
+			setStrIngredient7(null);
+		}
+		try {
+			setStrIngredient8((String) drinks.get("strIngredient8"));
+		} catch (ClassCastException e) {
+			setStrIngredient8(null);
+		}
+		try {
+			setStrIngredient9((String) drinks.get("strIngredient9"));
+		} catch (ClassCastException e) {
+			setStrIngredient9(null);
+		}
+		try {
+			setStrIngredient10((String) drinks.get("strIngredient10"));
+		} catch (ClassCastException e) {
+			setStrIngredient10(null);
+		}
+		try {
+			setStrIngredient11((String) drinks.get("strIngredient11"));
+		} catch (ClassCastException e) {
+			setStrIngredient11(null);
+		}
+		try {
+			setStrIngredient12((String) drinks.get("strIngredient12"));
+		} catch (ClassCastException e) {
+			setStrIngredient12(null);
+		}
+		try {
+			setStrIngredient13((String) drinks.get("strIngredient13"));
+		} catch (ClassCastException e) {
+			setStrIngredient13(null);
+		}
+		try {
+			setStrIngredient14((String) drinks.get("strIngredient14"));
+		} catch (ClassCastException e) {
+			setStrIngredient14(null);
+		}
+		try {
+			setStrIngredient15((String) drinks.get("strIngredient15"));
+		} catch (ClassCastException e) {
+			setStrIngredient15(null);
+		}
+		try {
+			setStrMeasure1((String) drinks.get("strMeasure1"));
+		} catch (ClassCastException e) {
+			setStrMeasure1(null);
+		}
+		try {
+			setStrMeasure2((String) drinks.get("strMeasure2"));
+		} catch (ClassCastException e) {
+			setStrMeasure2(null);
+		}
+		try {
+			setStrMeasure3((String) drinks.get("strMeasure3"));
+		} catch (ClassCastException e) {
+			setStrMeasure3(null);
+		}
+		try {
+			setStrMeasure4((String) drinks.get("strMeasure4"));
+		} catch (ClassCastException e) {
+			setStrMeasure4(null);
+		}
+		try {
+			setStrMeasure5((String) drinks.get("strMeasure5"));
+		} catch (ClassCastException e) {
+			setStrMeasure5(null);
+		}
+		try {
+			setStrMeasure6((String) drinks.get("strMeasure6"));
+		} catch (ClassCastException e) {
+			setStrMeasure6(null);
+		}
+		try {
+			setStrMeasure7((String) drinks.get("strMeasure7"));
+		} catch (ClassCastException e) {
+			setStrMeasure7(null);
+		}
+		try {
+			setStrMeasure8((String) drinks.get("strMeasure8"));
+		} catch (ClassCastException e) {
+			setStrMeasure8(null);
+		}
+		try {
+			setStrMeasure9((String) drinks.get("strMeasure9"));
+		} catch (ClassCastException e) {
+			setStrMeasure9(null);
+		}
+		try {
+			setStrMeasure10((String) drinks.get("strMeasure10"));
+		} catch (ClassCastException e) {
+			setStrMeasure10(null);
+		}
+		try {
+			setStrMeasure11((String) drinks.get("strMeasure11"));
+		} catch (ClassCastException e) {
+			setStrMeasure11(null);
+		}
+		try {
+			setStrMeasure12((String) drinks.get("strMeasure12"));
+		} catch (ClassCastException e) {
+			setStrMeasure12(null);
+		}
+		try {
+			setStrMeasure13((String) drinks.get("strMeasure13"));
+		} catch (ClassCastException e) {
+			setStrMeasure13(null);
+		}
+		try {
+			setStrMeasure14((String) drinks.get("strMeasure14"));
+		} catch (ClassCastException e) {
+			setStrMeasure14(null);
+		}
+		try {
+			setStrMeasure15((String) drinks.get("strMeasure15"));
+		} catch (ClassCastException e) {
+			setStrMeasure15(null);
+		}
+		try {
+			setStrCreativeCommonsConfirmed((String) drinks.get("strCreativeCommonsConfirmed"));
+		} catch (ClassCastException e) {
+			setStrCreativeCommonsConfirmed(null);
+		}
+		try {
+			setDateModified((String) drinks.get("dateModified"));
+		} catch (ClassCastException e) {
+			setDateModified(null);
+		}
+
+	}
+	
+	
+	
+	
 	public String getIdDrink() {
 		return idDrink;
 	}

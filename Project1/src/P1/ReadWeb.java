@@ -4,10 +4,11 @@ package P1;
 
 import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.json.*;
+
 import P1.Drink;
 
 public class ReadWeb {
@@ -47,28 +48,42 @@ public class ReadWeb {
        System.out.print((char)next);
        menu += (char)next;
        next=Inf.read();
-     }  
+     }
      System.out.println();
      System.out.println("Hey");
      System.out.print(menu);
-     JSONArray menuArray = null;
+     JSONArray drinkList = null;
      JSONObject JSONMenu = null;
      try {
          JSONMenu = new JSONObject(menu);
-         menuArray = JSONMenu.toJSONArray((JSONArray) JSONMenu.get("drinks"));
+         drinkList = JSONMenu.getJSONArray("drinks");
     }catch (Exception err){
          err.printStackTrace();
     }
-     JSONObject newMenu = null;
-     System.out.println();
-	 System.out.println(JSONMenu.names());
-
-	 System.out.println(JSONMenu);
-//    	 menuArry = new JSONArray((JSONArray)JSONMenu.get("drinks"));
-//		newMenu = new JSONObject(JSONMenu.get("drinks"));
-     System.out.println();
-//     System.out.println(newMenu.length());
      
+     
+     
+     int numDrinks = drinkList.length();
+     int numDrinkAttributes = 0;
+     JSONObject drinkResult = null;
+     Drink aDrink;
+     List<Drink> queriedDrinks = new ArrayList<>();
+     for(int i = 0; i < numDrinks; i++) {
+    	 try {
+    		 aDrink = new Drink();
+			drinkResult = drinkList.getJSONObject(i);
+			aDrink.populateFields(drinkResult);
+			queriedDrinks.add(aDrink);
+			System.out.println(aDrink);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+     }
+	 System.out.println();
+	 System.out.println(queriedDrinks.size());
+	 System.out.println(queriedDrinks);     
  }
 
-}
+} 
