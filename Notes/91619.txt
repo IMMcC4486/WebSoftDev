@@ -1,0 +1,38 @@
+Project 1 is due Saturday at 2 PM. Use turnin to submit a file readme.txt. 
+If it's an application, submit that. 
+Give directions on how to run in the readme and explain available queries.
+
+Your Tomcast account is set up.... Refer to tomcat online info
+
+
+Test your Tomcat installation. 
+
+Copy the file Snoop.war   cp ~/spiegel/webapps/Snoop.war webapps
+Try this URL: http://spiegel.kutztown.edu:8080/Snoop/SnoopServlet
+
+In your root directory is a file oracle.auth. This contains your credentials for the database.
+
+----------------------------------------------------
+
+How to get the files that are transmitted using get (query encoded in URL) and post.
+
+1. Get your table.
+2. F12, inspect
+3. Hit "Network"
+4. Reload Page. Resend data if necessary.
+5. Hit "All" in the submenu
+6. Hit "Params" in the sub-sub-menu
+
+If there were parameters, they should show in the window.
+
+------------------------------------------------------
+
+Packages
+
+package declaration is on 1st line (not counting comments)
+A package MUST be located on a path from a directory in the classpath
+The package must be named the same as the directory in which it is contained. 
+If a package declaration has more than one period (.),
+all the identifiers represent the path to the class' directory from a directory in the classpath.
+
+When importing one or more classes in a package (you can use the *) the
