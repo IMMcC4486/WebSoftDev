@@ -14,7 +14,14 @@ import P1.Drink;
 public class ReadWeb {
 
  public static void main(String args[]) throws java.io.IOException
- {   URL TheFile=null;
+ {   
+	 
+	 
+	 
+	 
+	 
+	 
+	 URL TheFile=null;
      try {	// Set up a URL to the file
        TheFile=new URL(
 //        "https://aa.usno.navy.mil/cgi-bin/aa_rstablew.pl?ID=AA&year=2008&task=0&state=PA&place=Kutztown"
@@ -25,6 +32,11 @@ public class ReadWeb {
        System.err.println("URL Setup failed...");
        e.printStackTrace();
      }
+     
+     
+     
+     
+     
      InputStream s=null;
      try { // Hook up to the file on the server
        s=TheFile.openStream();
@@ -49,8 +61,7 @@ public class ReadWeb {
        menu += (char)next;
        next=Inf.read();
      }
-     System.out.println();
-     System.out.println("Hey");
+
      System.out.print(menu);
      JSONArray drinkList = null;
      JSONObject JSONMenu = null;
@@ -74,6 +85,7 @@ public class ReadWeb {
 			drinkResult = drinkList.getJSONObject(i);
 			aDrink.populateFields(drinkResult);
 			queriedDrinks.add(aDrink);
+			System.out.println("Next Drink: ");
 			System.out.println(aDrink);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
