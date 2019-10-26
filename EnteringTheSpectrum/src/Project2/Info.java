@@ -291,16 +291,30 @@ public class Info {
 		char[] alphabet = {'1','2','3','4','5','6','7','8','9','0','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
 				's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 		for (char letter : alphabet) {
-			q = FileURLQuery(String.valueOf(letter));
+			q = FirstLetter(String.valueOf(letter));
 			ds = getQueryResult(q);
+			try {
 			da = stringToJSONArray(ds);
+			} catch (Exception e) {
+				continue;
+			}
 			dlist = drinkArrayToList(da);
 			for (Drink d : dlist) {
 				System.out.println(d.getName());
 				addDrinkToList(d, masterDrinkList);
 			}
 		}
-
+	}
+	
+	public static URL FirstLetter(String query) {
+		URL TheFile = null;
+		try { // Set up a URL to the file
+			TheFile = new URL("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + query);
+		} catch (Exception e) {
+			System.err.println("URL Setup failed...");
+			e.printStackTrace();
+		}
+		return TheFile;
 	}
 
 }
