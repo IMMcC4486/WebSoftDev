@@ -1,0 +1,8 @@
+Midterm oct 21.
+
+Database access can be streamlined.  
+
+
+
+
+sqlplus is used for direct access to the database. There are posts in the forum. 

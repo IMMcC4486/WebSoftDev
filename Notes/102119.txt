@@ -1,0 +1,24 @@
+Midterm oct 21.
+
+To access my war file: cp ~spiegel/webapps/Wars/<War file> . 
+
+Better is to:
+- Create webapps/work subdirectory & switch to it
+- To unpack ShowAjaxParam example (coming up today):
+	jar xvf ~spiegel/webapps/Wars/ShowParamAjax.war
+
+------------------------------
+Servlets
+
+Action is destination for form data.
+
+(spiegel.kutztown.edu:8080/ShowParameters?a=b&a=c&b=d&a=11)
+
+------------------------------
+
+AJAX - Asynchronous JavaScript and XML
+
+Request objects send the request to the server.
+	ActiveXObject for MS
+	XMLHTTPRequest otherwise
+	
