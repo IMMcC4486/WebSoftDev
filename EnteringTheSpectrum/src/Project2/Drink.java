@@ -375,7 +375,31 @@ public class Drink {
 				+ dateModified + "]";
 	}
 
-
+	/** Method to convert Drink to JSON formatted string object to distribute to front end
+	 * @return The json string of all attributes of the Drink object.
+	 */
+	public String toJSON() {		
+		return  "\"ID\": \"" + idDrink + 
+				"\", \"Drink\": \"" + strDrink + 
+				"\", \"DES\": \"" + strDrinkES + 
+				"\", \"Cat\": \"" + strCategory + 
+				"\", \"IBA\": \"" + strIBA+ 
+				"\", \"Alc\": \"" + strAlcoholic+ 
+				"\", \"Glass\": \"" + strGlass+ 
+				"\", \"Ins\": \"" + strInstructions+ 
+				"\", \"I1\": \"" + strIngredient1 + 
+				"\", \"I2\": \"" + strIngredient2 + 
+				"\", \"I3\": \"" + strIngredient3 + 
+				"\", \"I4\": \"" + strIngredient4 + 
+				"\", \"I5\": \"" + strIngredient5 + 
+				"\", \"M1\": \"" + strMeasure1 + 
+				"\", \"M2\": \"" + strMeasure2 + 
+				"\", \"M3\": \"" + strMeasure3 + 
+				"\", \"M4\": \"" + strMeasure4 + 
+				"\", \"M5\": \"" + strMeasure5 + 
+				"\"";
+	}
+	
 	/** getter for name
 	 * @return the drink name
 	 */
