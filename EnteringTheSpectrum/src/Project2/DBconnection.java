@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -14,7 +13,6 @@ public class DBconnection {
 
 	private static Connection conn;
 	private static PreparedStatement ps = null;
-	private static createStatement cs = null;
 	private static boolean psResult;
 	private static ResultSet rs = null;
 	private static final String URL = "jdbc:oracle:thin:@csdb.kutztown.edu:1521:orcl";
