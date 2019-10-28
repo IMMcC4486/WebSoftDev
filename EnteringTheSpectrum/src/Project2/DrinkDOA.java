@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class DrinkDOA {
 
 	// back end responses
-	public String getDrinks() {
+	public String checkDrinks() {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
