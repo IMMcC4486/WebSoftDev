@@ -1,4 +1,4 @@
-package Project2;
+package Java;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
@@ -10,36 +10,44 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class DBconnection {
-
+//  sqlplus imcco455/ruau83AT@//csdb.kutztown.edu/orcl
+// create table imcco455Drinks (idDrink varchar2 (20) Primary Key);
+//	insert into 
 	private static Connection conn;
 	private static PreparedStatement ps = null;
 	private static boolean psResult;
 	private static ResultSet rs = null;
 	private static final String URL = "jdbc:oracle:thin:@csdb.kutztown.edu:1521:orcl";
-	private static final String USERNAME = "spiegel";
-	private static final String PASSWORD = "legeips";
+	private static final String USERNAME = "imcco455";
+	private static final String PASSWORD = "ruau83AT";
 	private static boolean clearDB = true;
 	private static boolean prepDB = true;
 	private static boolean prepProceure = true;
+
 	public static void main(String[] args) {
 		conn = getConnection();
 	}
 
+	// Either Acad or myself is having some pretty serious autistic issues.
+	// Therefore, just going to to leave the tables open
 	public static Connection getConnection() {
+
+		// Focus solely on queries and inserts. Ridiculous.
 		doConnection();
-		clearDB();
-		prepDB();
-		prepProcedure();
+//		clearDB();
+//		prepDB();
+//		prepProcedure();
 		return conn;
 	}
-	
+
+
+
+	// Garbage method. Apparently Acad doesn't allow this.
 	private static void prepProcedure() {
 		if (prepProceure) {
 			System.out.println("Setting up initial DB table.");
 			try {
-				String sql = ""
-						+ "create or replace PROCEDURE imccofourfivefiveAddDrink("
-						+ "idDrink varchar2"
+				String sql = "" + "create or replace PROCEDURE imcco455NewDrink(" + "idDrink varchar2"
 //						+ "idDrink varchar2, "
 //						+ "strDrink varchar2,"
 //						+ "strDrinkES varchar2,"
@@ -58,11 +66,7 @@ public class DBconnection {
 //						+ "strMeasureThree varchar2,"
 //						+ "strMeasureFour varchar2,"
 //						+ "strMeasureFive varchar2"
-						+ ") "
-						+ "is" + 
-						" begin" + 
-						" insert into imccofourfivefiveDrinks values ("
-						+ "idDrink"
+						+ ") " + "is" + " begin" + " insert into imcco455Drinks values (" + "idDrink"
 //						+ "idDrink, "
 //						+ "strDrink,"
 //						+ "strDrinkES,"
@@ -81,13 +85,12 @@ public class DBconnection {
 //						+ "strMeasureThree,"
 //						+ "strMeasureFour, "
 //						+ "strMeasureFive"
-						+ ");" + 
-						"end;";
+						+ ");" + "end;";
 				System.out.println("prepProcedure sql query is : " + sql);
-				ps = conn.prepareStatement(sql);
-				psResult = ps.execute();
-				System.out.println("psResult Status for procedure prep: ");
-				System.out.println(psResult);
+//				ps = conn.prepareStatement(sql);
+//				psResult = ps.execute();
+//				System.out.println("psResult Status for procedure prep: ");
+//				System.out.println(psResult);
 			} catch (Exception e) {
 				System.out.println("Failed to Prepare Procedure to add Drinks on startup");
 				e.printStackTrace();
@@ -96,7 +99,8 @@ public class DBconnection {
 			System.out.println("DB Prepare Procedure complete.");
 		}
 	}
-	
+
+	// Garbage method. Apparently Acad doesn't allow this.
 	private static void prepDB() {
 		if (prepDB) {
 			System.out.println("Setting up initial DB table.");
@@ -104,9 +108,8 @@ public class DBconnection {
 				System.out.println("is connection closed?");
 				System.out.println(conn.isClosed());
 				System.out.println(conn.isReadOnly());
-				String sql = "create table imccofourfivefiveDrinks (" + 
-						"idDrink INTEGER PRIMARY KEY" +
-
+				String sql = "create table imcco455Drinks (" + "idDrink varchar2 (20) NOT NULL"
+						+ "CONSTRAINT PK_DRINKS PRIMARY KEY (idDrink)" +
 //						"idDrink varchar2 (50) primary key," + 
 //						"strDrink varchar2 (50)," + 
 //						"strDrinkES varchar2 (50)," + 
@@ -139,12 +142,13 @@ public class DBconnection {
 			System.out.println("DB Create Table complete.");
 		}
 	}
-	
+
+	// Garbage method. Apparently Acad doesn't allow this.
 	private static void clearDB() {
 		if (clearDB) {
 			System.out.println("Clearing pre-existing DB table");
 			try {
-				String sql = "Drop table imccofourfivefiveDrinks";
+				String sql = "Drop table imcco455Drinks";
 				System.out.println("clearDB sql query is : " + sql);
 				ps = conn.prepareStatement(sql);
 				psResult = ps.execute();
@@ -157,7 +161,7 @@ public class DBconnection {
 			System.out.println("DB clearing pre-existing DB table complete.");
 		}
 	}
-	
+
 	private static void doConnection() {
 		if (conn == null) {
 			try {
@@ -167,7 +171,7 @@ public class DBconnection {
 				e.printStackTrace();
 			}
 			System.out.println("Established connection to DB");
-		} 
+		}
 		try {
 			if (conn.isClosed()) {
 				try {

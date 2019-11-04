@@ -1,0 +1,30 @@
+<html>
+
+<head>
+<title>Assignment 6 LOL</title>
+<link rel="stylesheet" type="text/css" href="CSS/Drinks.css">
+</head>
+
+<body>
+	<div>
+		<p>Project 2</p>
+	</div>
+
+	<section id="AJAX"> 
+			<form method="post" name="updateform" id="fartSpackle">
+			<label>Enter A Drink Name</label>
+			<input type="text" name="DrinkName" id="DN" placeholder="Moscow Mule">
+			<input id="checkExactDrink" type="button" onclick ="checkExactDrink()" value="Search Exact Drink">
+			<input id="checkSimilarDrinks" type="button" onclick ="checkSimilarDrinks()" value="Search Similar Drinks">
+			<br>
+		</form>
+	</section>
+	<br>
+	<div id="resultDiv"></div>
+	<!-- ///// DA PROTECTA //////////// -->
+	<div id="mrprotection">Loading... Please Wait...</div>
+
+</body>
+
+<script src="JS/Drinks.js"></script>
+</html>

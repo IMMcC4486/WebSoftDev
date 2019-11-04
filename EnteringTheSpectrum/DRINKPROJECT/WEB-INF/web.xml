@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<web-app>
+  	<servlet>
+		<servlet-name>Servlet</servlet-name>
+		<display-name>Servlet</display-name>
+		<servlet-class>Java.Servlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Servlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+  
+  	<welcome-file-list>
+		<welcome-file>Drinks.html</welcome-file>
+	</welcome-file-list>
+</web-app>

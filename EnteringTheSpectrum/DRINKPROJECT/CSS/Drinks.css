@@ -1,0 +1,16 @@
+#mrprotection{
+	color: black;
+	display: none;
+	padding: 500;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    background: rgba(255,0,0,0.1);
+}
+
+p{
+	font-size: 24px;
+}

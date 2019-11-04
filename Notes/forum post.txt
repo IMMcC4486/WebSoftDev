@@ -1,0 +1,6 @@
+I've made a few full stack java applications before and I haven't encountered some of the issues I am with acad. 
+I've used local and AWS databases and never had some of these connectivity issues or errors with certain queries.
+I've invested a lot of my time thus far trying to catch up with little issues that aren't really related to the basic concepts I think we're trying to learn. More specifically getting the front and back end to communicate smoothly, and to have the back end communicate with the database in a well handled way (clean call statements, not having database errors crash the back end, not responding backend errors to front end, etc).
+I definitely would benefit from an extra week myself... 
+I trusted myself to be able to build up all the other stuff in a short timeframe since i've done it numerous times before, so i spent a lot of time trying to get through these little nuances.
+I'd appreciate an extension if possible and will still try to hand in a quality project. Otherwise, I'll jsut hand in whatever I can finish by tomorrow.
