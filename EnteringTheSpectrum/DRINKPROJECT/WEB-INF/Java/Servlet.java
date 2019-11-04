@@ -63,7 +63,7 @@ import org.json.JSONObject;
 //);
 
 
-//javac -cp "WEB-INF/lib/java-json.jar:WEB-INF/lib/ojdbc6.jar:WEB-INF/lib/servlet.jar" WEB-INF/Java/DBconnection.java WEB-INF/Java/Drink.java WEB-INF/Java/Servlet.java -d WEB-INF/classes 
+//javac -cp "WEB-INF/lib/java-json.jar:/usr/share/java/servlet.jar:/usr/lib/oracle/11.2/client64/lib/ojdbc6.jar:." WEB-INF/Java/DBconnection.java WEB-INF/Java/Drink.java WEB-INF/Java/Servlet.java -d WEB-INF/classes 
 //jar -cvf DRINKPROJECT.war *
 //mv DRINKPROJECT.war ../../../webapps
 public class Servlet extends HttpServlet {
@@ -74,7 +74,8 @@ public class Servlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		response.getWriter().append("Nah Dawg");
+		/*
 		System.out.println(request.getRequestURI());		
 		String uri = request.getRequestURI();
 		if(uri.equals("/Drinks/checkExactDrink.do")) {
@@ -139,6 +140,7 @@ public class Servlet extends HttpServlet {
 //			String drinkExists = drinkInList(da, drinkQuery);
 //			response.getWriter().append(drinkExists);
 		}
+		*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -14,3 +14,9 @@
 p{
 	font-size: 24px;
 }
+
+#CED,
+#CSD {
+    height: 20px;
+    width: 169px;
+}
